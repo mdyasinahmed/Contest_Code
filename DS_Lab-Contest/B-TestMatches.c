@@ -7,7 +7,7 @@ int main()
 
     while(t--)
     {
-        for(i = 0; i<m; i++)
+        for(i = 1; i<=m; i++)
         {
             scanf("%d", &r);
 
@@ -15,16 +15,27 @@ int main()
             {
                 IND++;
             }
-            else if(r == 2)
+            if(r == 2)
             {
                 ENG++;
             }
         }
-    }
-    while(t--)
-    {
-       
+        
+        if(IND==ENG)
+        {
+            printf("DRAW\n");
+        } 
+        if(IND>ENG)
+        {
+            printf("INDIA\n");
+        }
+        if(IND<ENG)
+        {
+            printf("ENGLAND\n");
+        }
+        continue;
     }
     
+
     return 0;
-} 
+}
