@@ -1,41 +1,46 @@
-#include<stdio.h>
+#include <stdio.h>
 
 int main()
 {
-    int t, m = 5, IND = 0, ENG = 0, i, r;
+    int t;
     scanf("%d", &t);
 
     while(t--)
     {
-        for(i = 1; i<=m; i++)
-        {
-            scanf("%d", &r);
+        int r[5];
 
-            if(r == 1)
+        for(int i = 0; i < 5; i++)
+        {
+            scanf("%d", &r[i]);
+        }
+
+        int IND = 0;
+        int ENG = 0;
+
+        for(int i = 0; i < 5; i++) 
+        {
+            if(r[i] == 1)
             {
                 IND++;
             }
-            if(r == 2)
+            else if(r[i] == 2)
             {
                 ENG++;
             }
         }
-        
-        if(IND==ENG)
-        {
-            printf("DRAW\n");
-        } 
-        if(IND>ENG)
+
+        if(IND > ENG) 
         {
             printf("INDIA\n");
         }
-        if(IND<ENG)
+        else if(ENG > IND)
         {
             printf("ENGLAND\n");
         }
-        continue;
+        else{
+            printf("DRAW\n");
+        }
     }
-    
 
     return 0;
 }
