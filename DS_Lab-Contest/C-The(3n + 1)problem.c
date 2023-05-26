@@ -1,15 +1,5 @@
 #include <stdio.h>
 
-void swap(int *x, int *y)
-{
-    int  temp;
-    temp = *x;
-    *x = *y;
-    *y = temp;
-
-
-}
-
 int cl(int n)
 {
     int l = 1;
@@ -34,6 +24,9 @@ int maxCL(int i, int j)
     if(i>j)
     {
         swap(&i, &j);
+        int  temp = i;
+        i = j;
+        j = temp;
     }
 
     int n, l, ml = 0;
