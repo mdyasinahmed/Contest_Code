@@ -1,3 +1,3 @@
-void main(){
-  List<int>
+void main() {
+  print("hello!");
 }

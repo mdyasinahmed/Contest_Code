@@ -1,7 +1,7 @@
 #include<stdio.h>
 
 int main(){
-    long long t, l, r, a, n, count=0;
+    long long t, l, r, a, n;
     scanf("%lld", &t);
 
     while(t--){
@@ -11,7 +11,7 @@ int main(){
             n = (r-l)/2;
         }
         if(l%2==0 && r%2==0){
-            l--, r+=1;
+            l--, r++;
             n = (r-l)/2;
         }
         if(l%2==0 && r%2!=0){
