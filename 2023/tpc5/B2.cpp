@@ -21,36 +21,23 @@ int primeCheck(int n) {
 
 int main() {
 
-    int t, a, b, sumDivA = 0, sumDivB = 0;
+    int t, a;
     cin >> t;
 
     while (t--)
     {
-        cin >> a >> b;
+        cin >> a;
 
+        int sumDivA = 0;
         for(int i=1; i<=a; i++) {
             if(a%i==0) {
                 sumDivA += i;
             } 
         }
+        //cout << sumDivA << endl;
         
         int count1 = primeCheck(sumDivA);
         if(count1 == 0) {
-            cout << "Yes" << endl;
-        } else {
-            cout << "No" << endl;
-
-        }
-
-        for(int i=1; i<=b; i++) {
-            if(b%i==0) {
-                sumDivB += i;
-            }
-        }
-        //cout << sumDivB << endl;
-        int count2 = primeCheck(sumDivB);
-
-        if(count2 == 0) {
             cout << "Yes" << endl;
         } else {
             cout << "No" << endl;
