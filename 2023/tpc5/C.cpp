@@ -8,11 +8,18 @@ int groupMax(int n, vector<int>&v) {
     int size = 0; 
 
     for(int i=0; i<n; i++) {
+        cout <<"i :" << i << endl;
         size++; 
+        //cout <<"size :" << size << endl;
         if(size >= v[i]) { 
             grp++; 
-            size = 0; 
+            size = 0;
+            //cout <<"Group :" << grp << endl;
+            //cout <<"Size Now :" << size << endl;
         }
+        //cout <<"Group :" << grp << endl;
+        //cout <<"Size Now :" << size << endl;
+        
     }
 
     return grp;
