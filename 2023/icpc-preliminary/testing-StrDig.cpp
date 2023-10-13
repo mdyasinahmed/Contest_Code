@@ -22,3 +22,8 @@ int main() {
 
     return 0;
 }
+
+
+
+overs = (float)input.size()/6;
+        cout << overs;
