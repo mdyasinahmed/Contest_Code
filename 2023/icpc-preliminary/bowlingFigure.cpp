@@ -3,9 +3,7 @@ using namespace std;
 
 
 int main() {   
-
-    int t, runs = 0, wickets = 0;
-    float overs = 0;
+    int t, runs = 0, wickets = 0, balls = 0;
     cin >> t;
 
     //cout << overs;
@@ -15,27 +13,31 @@ int main() {
     while(t--) {
         cin >> input;
 
+        int balls = input.size();
+
         for(char ch: input) {
-            overs++;
             if(ch == 'W') {
                 wickets++;
             }
             if(isdigit(ch)) {
-                numStr+=ch;
-            }
-        }
-
-        for(char ch2 : numStr) {
-            if(isdigit(ch2)) {
+                numStr=ch;
                 runs = runs + stoi(numStr);
             }
         }
 
-        printf("%.1f\n", overs);
-        cout << wickets << endl;
-        cout << runs << endl;
-        //cout << numStr << endl;
+
+        int overs = balls/6;
+        int RB = balls%6;
+        double OverFormat = overs + static_cast<double>(RB)/10;
+
+
+        if(runs>0) {
+            printf("%.1f Overs %d Runs %d Wicket.\n", OverFormat, runs, wickets);
+        }
         
+        printf("%.1f Overs %d Runs %d Wicket.\n", OverFormat, runs, wickets);
+        runs=0, wickets = 0;
     }
+    
     return 0;
 }
