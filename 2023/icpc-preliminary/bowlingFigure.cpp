@@ -30,12 +30,11 @@ int main() {
         int RB = balls%6;
         double OverFormat = overs + static_cast<double>(RB)/10;
 
-
-        if(runs>0) {
-            printf("%.1f Overs %d Runs %d Wicket.\n", OverFormat, runs, wickets);
-        }
+        (OverFormat>1.0)?printf("%.1f Overs ",OverFormat):printf("%.1f Over ",OverFormat);
+        (runs>1)?printf("%d Runs ",runs):printf("%d Run ",runs);
+        (wickets>1)?printf("%.d Wickets ",wickets):printf("%d Wicket ",wickets);
+        cout<<endl;
         
-        printf("%.1f Overs %d Runs %d Wicket.\n", OverFormat, runs, wickets);
         runs=0, wickets = 0;
     }
     

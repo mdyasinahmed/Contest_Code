@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "d:/PRO/Contest_Code/2023/Preli-Practice_Contest2",
-      "program": "d:/PRO/Contest_Code/2023/Preli-Practice_Contest2/build/Debug/outDebug",
+      "cwd": "d:/PRO/Contest_Code/2023/icpc-preliminary",
+      "program": "d:/PRO/Contest_Code/2023/icpc-preliminary/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
